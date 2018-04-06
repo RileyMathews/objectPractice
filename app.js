@@ -45,24 +45,29 @@ function editCandidate(property, value) {
 //object containing platform statements on current issues
 const platforms = Object.create({}, {
     taxes: {
+        enumerable: true,
         writable: true,
-        value: "No more taxes!!"
+        value: "no more taxes!!"
     },
     jobs: {
+        enumerable: true,
         writable: true,
-        value: "Jobs are good"
+        value: "jobs are good."
     },
     infrastructure: {
+        enumerable: true,
         writable: true,
-        value: "There should be more of it"
+        value: "there should be more of it."
     },
-    healthCare: {
+    healthcare: {
+        enumerable: true,
         writable: true,
-        value: "What is health?"
+        value: "what is health?"
     },
     crime: {
+        enumerable: true,
         writable: true,
-        value: "It's bad"
+        value: "it's bad."
     }
 })
 
@@ -233,3 +238,5 @@ editBio('hometown', 'whereville')
 editGallery('headShot', 'https://placeimg.com/700/500/people')
 editMission('short', 'To grow and develop the local community.')
 editRegister('url', 'http://www.goandvote.com')
+
+
