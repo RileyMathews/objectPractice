@@ -138,5 +138,3 @@ const register = Object.create({}, {
         value: "ready to vote? register here"
     }
 })
-
-
