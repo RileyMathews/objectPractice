@@ -98,7 +98,7 @@ const calendar = Object.create({}, {
     },
     dates: {
         writable: true,
-        value: ["02/03/2018", "02/07/2018", "02/13/2018", "02/14/2018"]
+        value: ["02/03/2018", "02/07/2019", "02/13/2018", "02/14/2018"]
     }
 })
 
@@ -227,7 +227,7 @@ function editRegister(property, value) {
 editCandidate('fullName', 'Mrs. Eilzabeth Sanger')
 editPlatforms('jobs', "who needs 'em")
 editDonation('url', 'http://www.dodonate.com')
-editCalendar('dates[0]', '02/04/2018')
+editCalendar('dates', ["02/03/2018", "02/07/2018", "02/13/2018", "02/14/2018"])
 editVolunteer('address', '555 pseudo drive, nowhere TN, 55555')
 editBio('hometown', 'whereville')
 editGallery('headShot', 'https://placeimg.com/700/500/people')
