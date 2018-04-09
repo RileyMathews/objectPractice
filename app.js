@@ -228,6 +228,12 @@ function editRegister(property, value) {
 }
 
 
+//function to edit any object
+const modify = (theObject, theProperty, theNewValue) => {
+    theObject[theProperty] = theNewValue
+}
+
+
 //function calls to edit object states
 editCandidate('fullName', 'Mrs. Eilzabeth Sanger')
 editPlatforms('jobs', "who needs 'em")
