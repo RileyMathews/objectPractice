@@ -96,20 +96,32 @@ function editDonation(property, value) {
 
 //---------------
 //object holding calendar of events
-const calendar = Object.create({}, {
-    events: {
-        writable: true,
-        value: ["speech", "public appearance", "community open house", "town hall meeting"]
+const calendar = [
+    speach =  {
+        name: "speach value",
+        date: "02/03/2018"
     },
-    dates: {
-        writable: true,
-        value: ["02/03/2018", "02/07/2019", "02/13/2018", "02/14/2018"]
+    publicAppearance = {
+        name: "public appearance",
+        date: "02/07/2019"
+    },
+    openHouse = {
+        name: "community open house",
+        date: "02/13/2018"
+    },
+    townHall = {
+        name: "town hall meeting",
+        date: "02/14/2018"
     }
-})
+]
 
-//function to edit calendar
-function editCalendar(property, value) {
-    calendar[property] = value
+const editCalendar = (objectToChange, key, newValue) => {
+    for (let i = 0; i < calendar.length; i++) {
+        let currentObject = calendar[i].name
+        if (currentObject === objectToChange) {
+            calendar[i][key] = newValue
+        }
+    }
 }
 
 //---------------
@@ -238,7 +250,7 @@ const modify = (theObject, theProperty, theNewValue) => {
 editCandidate('fullName', 'Mrs. Eilzabeth Sanger')
 editPlatforms('jobs', "who needs 'em")
 editDonation('url', 'http://www.dodonate.com')
-editCalendar('dates', ["02/03/2018", "02/07/2018", "02/13/2018", "02/14/2018"])
+editCalendar("public appearance", "date", "02/07/2018")
 editVolunteer('address', '555 pseudo drive, nowhere TN, 55555')
 editBio('hometown', 'whereville')
 editGallery('headShot', 'https://placeimg.com/700/500/people')
